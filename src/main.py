@@ -43,19 +43,19 @@ def menu():
     while True:
         screen.fill((50,50,100))
         text = pygame.font.Font("src/assets/font.ttf",
-                                100).render("MENU", True, "#ffb500")
+                                100).render("MENU", True, (238, 100, 123))
         rect = text.get_rect(center=(250, 100))
         text2 = pygame.font.Font(
-            "src/assets/font.ttf", 20).render("Aperte A para comecar!", True, "#ffb500")
+            "src/assets/font.ttf", 20).render("Aperte A para comecar!", True, (238, 100, 123))
         rect2 = text.get_rect(center=(230, 250))
         text3 = pygame.font.Font(
-            "src/assets/font.ttf", 20).render("Aperte O para opcoes", True, "#ffb500")
+            "src/assets/font.ttf", 20).render("Aperte O para opcoes", True, (238, 100, 123))
         rect3 = text.get_rect(center=(230, 300))
         text4 = pygame.font.Font(
-            "src/assets/font.ttf", 20).render("Aperte Q para sair", True, "#ffb500")
+            "src/assets/font.ttf", 20).render("Aperte Q para sair", True, (238, 100, 123))
         rect4 = text.get_rect(center=(230, 350))
         text5 = pygame.font.Font(
-            "src/assets/font.ttf", 20).render("Aperte C para controles", True, "#ffb500")
+            "src/assets/font.ttf", 20).render("Aperte C para controles", True, (238, 100, 123))
         rect5 = text.get_rect(center=(230, 400))
 
         screen.blit(text, rect)
