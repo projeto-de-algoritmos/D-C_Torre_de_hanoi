@@ -1,45 +1,30 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Torre de Hanoi
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 5<br>
+**Conteúdo da Disciplina**: Dividir e Conquistar<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 17/0013693  |  Joao Gabriel Rossi |
+| 19/0026600  |  Davi Marinho da Silva Campos |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+A Torre de Hanoi é um jogo muito famoso, quase como um quebra-cabeça, ele consiste em três bases com 5 discos na esquerda e o objetivo é passar todos os discos para direita em ordem crescente de diâmetro.
+
+Nosso algoritmo é um resolvedor da Torre de Hanoi em alguns passos.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python<br>
+**Framework**: Pygame<br>
+Para rodar o projeto é necessário apenas de possuir Python e Pygame.
+Para instalar o Pygame, rode o comando compatível com sua versão do Python: 
+- `pip install pygame`
+- `pip3 install pygame`
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
-
+Para rodar o programa, entre na pasta do clone e digite o comando compatível com sua versão do Python:
+- `python src/main.py` 
+- `python3 src/main.py`
