@@ -58,5 +58,5 @@ class Hanoi:
                     pygame.quit()
                     sys.exit()
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_a:
+                    if event.key == pygame.K_b:
                         return MENU
