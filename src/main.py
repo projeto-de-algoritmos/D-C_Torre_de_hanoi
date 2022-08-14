@@ -35,6 +35,7 @@ def about():
     while True:
 
         screen = pygame.display.set_mode((800, 600))
+        screen.fill((50,50,100))
         text = pygame.font.Font("src/assets/font.ttf", 42).render("Torre de Hanoi", True, (238, 100, 123))
         rect = text.get_rect(center=(400,150))
         text2 = pygame.font.Font("src/assets/font.ttf", 18).render("A Torre de Hanoi é um jogo muito famoso", True, (238, 100, 123))

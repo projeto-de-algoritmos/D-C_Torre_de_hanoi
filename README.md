@@ -16,6 +16,13 @@ Nosso algoritmo é um resolvedor da Torre de Hanoi em alguns passos.
 
 ## Screenshots
 
+### Menu
+![screenshot 1](img/PA1.png)
+### Sobre a ideia
+![screenshot 1](img/PA2.png)
+### Torre Finalizada
+![screenshot 2](img/PA3.png)
+
 ## Instalação 
 **Linguagem**: Python<br>
 **Framework**: Pygame<br>
