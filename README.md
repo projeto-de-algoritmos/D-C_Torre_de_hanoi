@@ -14,6 +14,10 @@ A Torre de Hanoi é um jogo muito famoso, quase como um quebra-cabeça, ele cons
 
 Nosso algoritmo é um resolvedor da Torre de Hanoi em alguns passos.
 
+## Apresentacao
+
+![Video da apresentacao](img/PA4-Video.mp4)
+
 ## Screenshots
 
 ### Menu
