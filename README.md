@@ -16,16 +16,16 @@ Nosso algoritmo é um solver da Torre de Hanoi em alguns passos.
 
 ## Apresentacao
 
-![Video da apresentacao](img/PA4-Video.mp4)
+![Video da apresentacao](Apresentacao/PA4-Video.mp4)
 
 ## Screenshots
 
 ### Menu
-![screenshot 1](img/PA1.png)
+![screenshot 1](assets/PA1.png)
 ### Sobre a ideia
-![screenshot 2](img/PA2.jpeg)
+![screenshot 2](assets/PA2.jpeg)
 ### Torre Finalizada
-![screenshot 3](img/PA3.jpeg)
+![screenshot 3](assets/PA3.jpeg)
 
 ## Instalação 
 **Linguagem**: Python<br>
