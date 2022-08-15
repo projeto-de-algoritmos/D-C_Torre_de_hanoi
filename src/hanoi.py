@@ -46,13 +46,18 @@ class Hanoi:
                 text = pygame.font.Font("src/assets/font.ttf",
                                         32).render("Torre de Hanoi", True, (238, 100, 123))
                 rect = text.get_rect(center=(250, 65))
+                text2 = pygame.font.Font("src/assets/font.ttf",
+                                        15).render("Aperte B para retornar", True, (238, 100, 123))
+                rect2 = text.get_rect(center=(310, 110))
 
                 screen.blit(text, rect)
+                screen.blit(text2, rect2)
                 for i, pile in enumerate(position):
                     self.__pyramid(pile, 10 + self.space_per_level *
                                    i, 300, self.level_height, screen)
                 pygame.display.update()
                 time.sleep(self.interval)
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()

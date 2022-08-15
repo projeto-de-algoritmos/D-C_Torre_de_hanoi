@@ -12,6 +12,8 @@ GAME = 2
 ABOUT = 3
 CONTROL = 4
 
+n_levels = 5
+
 
 pygame.init()
 
@@ -21,12 +23,11 @@ pygame.display.set_caption("Menu")
 
 
 def game():
-    n_levels = 5
     base_width = 100//n_levels
     level_height = 150//n_levels
     space = WIDTH // 3
 
-    hanoi = Hanoi(n_levels=n_levels, base_width=base_width, level_height=level_height, interval=0.35, space_per_level=space)
+    hanoi = Hanoi(n_levels=n_levels, base_width=base_width, level_height=level_height, interval=0.25, space_per_level=space)
     if hanoi.hanoi_display() == 1:
         return MENU
 
@@ -38,17 +39,17 @@ def about():
         screen.fill((50,50,100))
         text = pygame.font.Font("src/assets/font.ttf", 42).render("Torre de Hanoi", True, (238, 100, 123))
         rect = text.get_rect(center=(400,150))
-        text2 = pygame.font.Font("src/assets/font.ttf", 18).render("A Torre de Hanoi é um jogo muito famoso", True, (238, 100, 123))
+        text2 = pygame.font.Font("src/assets/font.ttf", 18).render("A Torre de Hanoi é um jogo muito famoso.", True, (238, 100, 123))
         rect2 = text.get_rect(center=(350, 230))
-        text3 = pygame.font.Font("src/assets/font.ttf", 18).render("famoso ele consiste em três bases com", True, (238, 100, 123))
+        text3 = pygame.font.Font("src/assets/font.ttf", 18).render("Ele consiste em três bases com", True, (238, 100, 123))
         rect3 = text.get_rect(center=(350, 280))
-        text4 = pygame.font.Font("src/assets/font.ttf", 18).render("5 discos na esquerda e o objetivo é", True, (238, 100, 123))
+        text4 = pygame.font.Font("src/assets/font.ttf", 18).render("X discos na esquerda e o objetivo é", True, (238, 100, 123))
         rect4 = text.get_rect(center=(350, 330))
         text5 = pygame.font.Font("src/assets/font.ttf", 18).render("passar todos os discos para direita ", True, (238, 100, 123))
         rect5 = text.get_rect(center=(350, 380))
         text6 = pygame.font.Font("src/assets/font.ttf", 18).render("em ordem crescente de diâmetro.", True, (238, 100, 123))
         rect6 = text.get_rect(center=(350, 430))
-        text7 = pygame.font.Font("src/assets/font.ttf", 18).render("Nosso algoritmo é um resolvedor", True, (238, 100, 123))
+        text7 = pygame.font.Font("src/assets/font.ttf", 18).render("Nosso algoritmo é um solver", True, (238, 100, 123))
         rect7 = text.get_rect(center=(350, 480))
         text8 = pygame.font.Font("src/assets/font.ttf", 18).render("da Torre de Hanoi em alguns passos.", True, (238, 100, 123))
         rect8 = text.get_rect(center=(350, 530))
@@ -77,27 +78,40 @@ def about():
         pygame.display.flip()
 
 def menu():
+    global n_levels
     while True:
         
         screen = pygame.display.set_mode((500, 400))
         screen.fill((50,50,100))
         text = pygame.font.Font("src/assets/font.ttf",
                                 100).render("MENU", True, (238, 100, 123))
-        rect = text.get_rect(center=(250, 100))
+        rect = text.get_rect(center=(250, 70))
         text2 = pygame.font.Font(
             "src/assets/font.ttf", 20).render("Aperte A para comecar!", True, (238, 100, 123))
-        rect2 = text.get_rect(center=(230, 250))
+        rect2 = text.get_rect(center=(230, 190))
         text3 = pygame.font.Font(
             "src/assets/font.ttf", 20).render("Aperte O para sobre", True, (238, 100, 123))
-        rect3 = text.get_rect(center=(230, 300))
+        rect3 = text.get_rect(center=(230, 240))
         text4 = pygame.font.Font(
             "src/assets/font.ttf", 20).render("Aperte Q para sair", True, (238, 100, 123))
-        rect4 = text.get_rect(center=(230, 350))
+        rect4 = text.get_rect(center=(230, 290))
+        text5 = pygame.font.Font(
+            "src/assets/font.ttf", 20).render("Aperte R para + discos", True, (238, 100, 123))
+        rect5 = text.get_rect(center=(230, 340))
+        text6 = pygame.font.Font(
+            "src/assets/font.ttf", 20).render("Aperte E para - discos", True, (238, 100, 123))
+        rect6 = text.get_rect(center=(230, 390))
+        text7 = pygame.font.Font(
+            "src/assets/font.ttf", 15).render(f"Discos: {n_levels}", True, (238, 100, 123))
+        rect7 = text.get_rect(center=(230, 420))
 
         screen.blit(text, rect)
         screen.blit(text2, rect2)
         screen.blit(text3, rect3)
         screen.blit(text4, rect4)
+        screen.blit(text5, rect5)
+        screen.blit(text6, rect6)
+        screen.blit(text7, rect7)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -108,6 +122,11 @@ def menu():
                     game()
                 elif event.key == pygame.K_o:
                     about()
+                elif event.key == pygame.K_r:
+                    n_levels += 1
+                elif event.key == pygame.K_e:
+                    if n_levels > 3:
+                        n_levels -= 1
                 elif event.key == pygame.K_q:
                     pygame.quit()
                     sys.exit()

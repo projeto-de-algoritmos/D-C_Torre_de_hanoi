@@ -12,16 +12,16 @@
 ## Sobre 
 A Torre de Hanoi é um jogo muito famoso, quase como um quebra-cabeça, ele consiste em três bases com 5 discos na esquerda e o objetivo é passar todos os discos para direita em ordem crescente de diâmetro.
 
-Nosso algoritmo é um resolvedor da Torre de Hanoi em alguns passos.
+Nosso algoritmo é um solver da Torre de Hanoi em alguns passos.
 
 ## Screenshots
 
 ### Menu
 ![screenshot 1](img/PA1.png)
 ### Sobre a ideia
-![screenshot 1](img/PA2.png)
+![screenshot 2](img/PA2.jpeg)
 ### Torre Finalizada
-![screenshot 2](img/PA3.png)
+![screenshot 3](img/PA3.jpeg)
 
 ## Instalação 
 **Linguagem**: Python<br>
